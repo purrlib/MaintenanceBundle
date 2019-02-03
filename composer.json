@@ -1,0 +1,32 @@
+{
+  "name": "purrlib/maintenance-bundle",
+  "description": "This bundle allow you to put your symfony app in maintenance mode via command",
+  "license": "MIT",
+  "keywords": ["symfony", "bundle", "purrlib", "maintenance", "maintenance-bundle"],
+  "type": "symfony-bundle",
+  "homepage": "https://github.com/purrlib/MaintenanceBundle",
+  "authors": [
+    {
+      "name": "VectorXHD",
+      "email": "vectorxhd@protonmail.com",
+      "homepage": "https://github.com/VectorXHD",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "symfony/framework-bundle": "^3.4",
+    "symfony/twig-bundle": "^3.4",
+    "symfony/templating": "^3.4",
+    "twig/twig": "~1.12|~2"
+  },
+  "autoload": {
+    "psr-4": {
+      "PurrLib\\MaintenanceBundle\\": ""
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}

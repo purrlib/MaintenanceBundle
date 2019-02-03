@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="purrlib_maintenance.manager" class="PurrLib\MaintenanceBundle\Manager\MaintenanceManager">
+            <argument>%purrlib_maintenance%</argument>
+            <argument>%kernel.root_dir%</argument>
+            <argument type="service" id="templating"/>
+        </service>
+
+        <service id="purrlib_maintenance.subscriber" class="PurrLib\MaintenanceBundle\EventListener\MaintenanceListener">
+            <argument type="service" id="purrlib_maintenance.manager" />
+            <tag name="kernel.event_subscriber"/>
+        </service>
+    </services>
+</container>
